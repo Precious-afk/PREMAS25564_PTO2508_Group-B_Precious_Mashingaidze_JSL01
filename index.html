@@ -1,67 +1,103 @@
-<html>
-  <head>
-    <meta />
-    <meta />
-    <title>Document</title>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
 
-  <body>
-    <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
-    <nav>
-      <div>
-        <h4>ALL BOARDS (1)</h4>
-        <button>Launch Career</button>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Launch Career - Kanban</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <!-- Main Layout: Header with board title, add task button, and main content area for task columns. -->
-    <div>
-      <header>
-        <div>
-          <h2>Launch Career</h2>
+<body>
+  <div class="app">
+    <!-- Navigation Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <div class="brand">
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="6" height="25" rx="2" fill="#635FC7"/>
+            <rect x="9" width="6" height="25" rx="2" fill="#635FC7" fill-opacity="0.75"/>
+            <rect x="18" width="6" height="25" rx="2" fill="#635FC7" fill-opacity="0.5"/>
+          </svg>
+          <span>kanban</span>
         </div>
-      </header>
-
-      <div>
-        <main>
-          <!-- Task Columns: Display tasks grouped by status (TODO, DOING, DONE). -->
-          <div>
-            <div>
-              <span></span>
-              <h4>TODO</h4>
-            </div>
-            <!-- Tasks container for TODO -->
-            <div>
-              <div>Launch Epic Career 🚀</div>
-              <div>Learn Data Structures and Algorithms 📚</div>
-            </div>
-          </div>
-          <!-- DOING Column -->
-          <div>
-            <div>
-              <span></span>
-              <h4>DOING</h4>
-            </div>
-            <!-- Tasks container for DOING -->
-            <div>
-              <div>Master JavaScript 💛</div>
-              <div>Keep on Going 🏆</div>
-            </div>
-          </div>
-          <!-- DONE Column -->
-          <div>
-            <div>
-              <span></span>
-              <h4>DONE</h4>
-            </div>
-            <!-- Tasks container for DONE -->
-            <div>
-              <div>Contribute to Open Source Projects 🌐</div>
-              <div>Build Portfolio Projects 🛠️</div>
-            </div>
-          </div>
-        </main>
+        <div class="boards-title">ALL BOARDS (1)</div>
+        <a href="#" class="board-link active">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.846133 0.846133C0.304363 1.3879 0 2.12271 0 2.88889V13.1111C0 13.8773 0.304363 14.6121 0.846133 15.1539C1.3879 15.6956 2.12271 16 2.88889 16H13.1111C13.8773 16 14.6121 15.6956 15.1539 15.1539C15.6956 14.6121 16 13.8773 16 13.1111V2.88889C16 2.12271 15.6956 1.3879 15.1539 0.846133C14.6121 0.304363 13.8773 0 13.1111 0H2.88889C2.12271 0 1.3879 0.304363 0.846133 0.846133ZM1.33333 13.1111V2.88889C1.33333 2.47633 1.49722 2.08067 1.78895 1.78895C2.08067 1.49722 2.47633 1.33333 2.88889 1.33333H13.1111C13.5237 1.33333 13.9193 1.49722 14.2111 1.78895C14.5028 2.08067 14.6667 2.47633 14.6667 2.88889V13.1111C14.6667 13.5237 14.5028 13.9193 14.2111 14.2111C13.9193 14.5028 13.5237 14.6667 13.1111 14.6667H2.88889C2.47633 14.6667 2.08067 14.5028 1.78895 14.2111C1.49722 13.9193 1.33333 13.5237 1.33333 13.1111Z" fill="currentColor"/>
+          </svg>
+          Launch Career
+        </a>
       </div>
-    </div>
-  </body>
+    </aside>
+
+   <!-- Main Content -->
+    <main class="main">
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+      <div class="brand">
+        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="6" height="25" rx="2" fill="#635FC7"/>
+          <rect x="9" width="6" height="25" rx="2" fill="#635FC7" fill-opacity="0.75"/>
+          <rect x="18" width="6" height="25" rx="2" fill="#635FC7" fill-opacity="0.5"/>
+        </svg>
+      </div>
+      <button class="board-selector">
+        <span>Launch Career</span>
+        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L5 5L9 1" stroke="#635FC7" stroke-width="2"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="header">Launch Career</div>
+
+      <!-- Task Columns -->
+      <section class="kanban">
+        <!-- TODO Column -->
+        <div class="column">
+          <div class="column-header">
+            <span class="dot todo"></span>
+            <span class="column-title">TODO (4)</span>
+          </div>
+          <div class="cards">
+            <div class="card">Launch Epic Career 🚀</div>
+            <div class="card">Conquer React 🎯</div>
+            <div class="card">Understand Databases 🔮</div>
+            <div class="card">Crush Frameworks 🥒</div>
+          </div>
+        </div>
+
+        <!-- DOING Column -->
+        <div class="column">
+          <div class="column-header">
+            <span class="dot doing"></span>
+            <span class="column-title">DOING (3)</span>
+          </div>
+          <div class="cards">
+            <div class="card">Master JavaScript 💛</div>
+            <div class="card">Never Give Up 🏆</div>
+          </div>
+        </div>
+
+        <!-- DONE Column -->
+        <div class="column">
+          <div class="column-header">
+            <span class="dot done"></span>
+            <span class="column-title">DONE (3)</span>
+          </div>
+          <div class="cards">
+            <div class="card">Explore ES6 Features 🚀</div>
+            <div class="card">Have fun 🥳</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+
 </html>
